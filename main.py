@@ -1,6 +1,7 @@
 from turtle import *
 delay(0)
 
+
 def notch(ln, flag):
     """
     Вспомогательная для основной функция, делает насечку и пишет число на оси OX
@@ -108,12 +109,3 @@ def main(len_x, len_y, center_pos=[0, 0], clr='black', flag=True, scale=30):
 
 
 main(8, 8, [0, 0], "#f23425", True, 70)
-i = 0
-while i < 14:
-    right(60)
-    forward(70)
-    right(60)
-    forward(70)
-    right(270)
-    i += 1
-mainloop()
