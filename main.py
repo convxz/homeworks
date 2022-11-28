@@ -106,6 +106,18 @@ def main(len_x, len_y, center_pos=[0, 0], clr='black', flag=True, scale=30):
     notchy(i, flag)
     forward(len_y//2)
     hideturtle()
+    exitonclick()
 
 
-main(8, 8, [0, 0], "#f23425", True, 70)
+print("Задание: вывести плоскость координат, зависящую от следующих параметров:")
+print("длина осей (разная) , центр координат, цвет оси, флаг, определяющий наличие цифр, масштаб")
+lenx, leny = int(input("Введите длину оси X: ")), int(input("Введите длину оси Y"))
+c_center = input("Введите координаты ценра: ").split(" ")
+for i in range(2):
+    c_center[i] = int(c_center[i])
+clr = input("Введите цвет осей (желательно в формате RGB): ")
+flag = bool(int(input("Введите что угодно, если нужны цифры на оси, и 0 если не нужны: ")))
+m = int(input("Введите, сколько пикселей будет в отрезке длиной 1: "))
+
+if __name__ == "__main__":
+    main(lenx, leny, c_center, clr, flag, m)
